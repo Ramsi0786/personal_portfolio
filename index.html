@@ -225,30 +225,34 @@
                     <div class="contact-form">
                         <h2 class="text-dark">Get in Touch</h2>
                         <p class="lead">If you have any questions, project ideas, or want to connect, feel free to reach out to me!</p>
-                        <form action="#">
+                        <form id="form" action="#">
                             <div class="row gy-4 gx-3">
-                                <div class="col-12">
+                                <div  class="col-12">
                                     <div class="form-group">
                                         <label class="form-label">Name</label>
-                                        <input type="text" class="form-control" name="name">
+                                        <input type="text" id="name" class="form-control" name="name" placeholder="Enter yoyr Name">
+                                        <span style="color: red;" id="name_error"></span>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
                                         <label class="form-label">Email</label>
-                                        <input type="email" class="form-control" name="email">
+                                        <input type="email" id="email" class="form-control" name="email" placeholder="Enter your Mail Id">
+                                        <span style="color: red;" id="email_error"></span>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
                                         <label class="form-label">Phone Number</label>
-                                        <input type="tel" class="form-control" name="tel" >
+                                        <input type="tel" id="number" class="form-control" name="tel" placeholder="Enter your vaild Phone number">
+                                        <span style="color: red;" id="phone_error"></span>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
                                         <label class="form-label">Subject</label>
-                                        <input type="text" class="form-control" name="subject">
+                                        <input type="text" class="form-control" name="subject" placeholder="Enter the subject want to discuss">
+                                        <span style="color: red;" id="subject_error"></span>
                                     </div>
                                 </div>
                                 <div class="col-12">
