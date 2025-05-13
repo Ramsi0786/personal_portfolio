@@ -18,7 +18,6 @@ const form = document.getElementById('form');
 const name_error = document.getElementById('name_error');
 const email_error = document.getElementById('email_error');
 
-// Create error spans
 const phone_error = document.createElement('span');
 phone_error.style.color = "red";
 number.parentNode.appendChild(phone_error);
@@ -62,3 +61,30 @@ form.addEventListener('submit', (e) => {
         e.preventDefault(); // Stop form submission if there are errors
     }
 });
+
+
+function sendMail(){
+    var params = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        number: document.getElementById("number").value,
+        subject: document.getElementById("subject").value,
+    };
+
+const serviceID = "service_ij6vk8i";
+const templateID = "template_20w0aac";
+
+emailjs
+.send(serviceID,templateID,params)
+.then((res) => {
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("number").value = "";
+        document.getElementById("subject").value = "";
+        console.log(res);
+        alert("Your message sent successfully");
+    })
+
+    .catch((err) => console.log(err));
+
+}
