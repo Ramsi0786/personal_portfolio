@@ -11,325 +11,217 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "nQPcMTkPSaMeskwxt",
-      });
-   })();
-</script>
 </head>
 <body>
-    <header class="main-header">
-        <nav class="navbar header-nav navbar-expand-lg">
-            <div class="container">
-                <h4 class="mb-0">RΛM<span class="text-primary">$</span>!</h4>
+    <div id="header">
 
-              <div class="collapse navbar-collapse justify-content-end" id="navbar-collapse-toggle">
-                <ul class="navbar-nav mx-auto">
-                    <li>
-                        <a href="#home" class="nav-link" data-scroll-nav=0>Home</a>
-                    </li>
-                    <li>
-                        <a href="#about" class="nav-link" data-scroll-nav=1>About Me</a>
-                    </li>
-                    <li>
-                        <a href="#services" class="nav-link" data-scroll-nav=2>Services</a>
-                    </li>
-                    <li>
-                        <a href="#skill" class="nav-link" data-scroll-nav=3>Skill</a>
-                    </li>
-                    <li>
-                        <a href="#portfolio" class="nav-link" data-scroll-nav=4>Portfolio</a>
-                    </li>
+        <div class="container">
+            <nav>
+                <h4 class="mb-0">RΛM<span class="text" style="color: #ff004f;">$</span>!</h4>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
-             </div>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Hi, I'm <span>Remsia</span></h1>
+                <h5><span>MERN Stack</span> Student</h5>
+                <h5>Aspired developer at Brototype</h5>
+            </div>
+        </div>
 
-             <div class="ms-auto d-none d-lg-block">
-                <a class="colored-btn" href="#contact">Contact Now</a>
-             </div>
-
-             <button class="navbar-toggler collapsed" type="button" 
-                      data-bs-toggle="collapse" data-bs-target="#navbar-collapse-toggle">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </button>
-           </div> 
-        </nav>
-    </header>
-
-    <main>
-        <section id="home" class="home-section bg-gray">
+    </div>
+    <!-- ------------about---------- -->
+    <div id="about">
         <div class="container">
-            <div class="row gy-5 align-items-center">
-                <div class="col-lg-6">
-                    <div class="home-intro text-center text-lg-start">
-                        <h6>Hi, My name is Remsia P S.</h6>
-                        <h1><span>MERN Stack</span> Student</h1>
-                        <p>Aspired developer at Brototype</p>
-                        <a href="#about" class="colored-btn mt-1">
-                            About Me
-                        </a>
-                    </div>
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/whatsapp-img-r-mrg.jpg">
                 </div>
-                <div class="col-lg-6 pt-4 pt-lg-0">
-                    <div class="home-image text-center">
-                        <img src="images/profile.png" alt="">
-                    </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I'm a results-driven professional with a background in Economics and experience in business development, customer service, and public relations. With strong communication skills and a passion for problem-solving, I’ve successfully handled client management, loyalty programs, and customer satisfaction initiatives. <br> Currently, I’m pursuing my dream of becoming a full-stack web developer, specializing in the MERN stack. I'm focused on building user-friendly, responsive, and dynamic web applications. I bring a unique blend of people skills and technical knowledge, and I’m excited to grow in the tech field.</p>
+
+                            <div class="tab-titles">
+                                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                                <p class="tab-links" onclick="opentab('education')">Education</p>
+                            </div>
+
+                        <div class="tab-contents active-tab" id="skills">
+                          <ul>
+                            <li><span>Web Development</span><br>Currently pursuing MERN-stack development at Brototype</li>
+                            <li><span>Communication</span><br>Skilled in public relations and business development</li>
+                            <li><span>Problem Solving</span><br>Experienced in resolving client and business challenges</li>
+                          </ul>
+                        </div>
+                        
+                           <div class="tab-contents" id="experience">
+                            <ul>
+                             <li><span>Nov 2024 - Present</span><br>Training in full-stack development at Brototype</li>
+                             <li><span>Apr 2024 - Nov 2025</span><br>Handled client issues and delivered solutions as a Business Development Professional</li>
+                             <li><span>Apr 2024 - Nov 2025</span><br>Improved operational processes and enhanced customer experience</li>
+                            </ul>
+                           </div>
+
+                           <div class="tab-contents" id="education">
+                            <ul>
+                             <li><span>2025</span><br>Pursuing full-stack development at Brototype</li>
+                             <li><span>2024</span><br>Graduated with a Bachelor's degree in Economics</li>
+                             <li><span>2019</span><br>Completed 12th grade (Higher Secondary Education)</li>
+                            </ul>
+                           </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section id="about" class="section">
+    <!-- -------------------services----------------->
+
+    <div id="services">
         <div class="container">
-            <div class="row gy-5 align-items-center">
-                <div class="col-lg-6 text-center">
-                    <img class="about-img" src="images/about.png" alt="About me">
-                </div>
-                <div class="col-lg-6 ps-lg-5">
-                    <div class="about-text">
-                        <h3 class="h1 mb-3 text-dark fw-semibold">
-                            Public Relations & Business Development Professional
-                        </h3>
-                        <p>I'm a results-driven professional with a background in Economics and experience in business development, customer service, and public relations. With strong communication skills in Malayalam and a passion for problem-solving, I’ve successfully handled client management, loyalty programs, and customer satisfaction initiatives. <br>
-                            Currently, I’m pursuing my dream of becoming a full-stack web developer, specializing in the MERN stack. I'm focused on building user-friendly, responsive, and dynamic web applications. I bring a unique blend of people skills and technical knowledge, and I’m excited to grow in the tech field.</p>
-                            <div class="row pt-2">
-                                <div class="col-6 col-md-4">
-                                    <h5 class="text-primary fw-semibold fs-4 mb-0">1 years </h5><span class="text-dark">Experienced in public Relation</span>
-                                </div>
-                                <div class="col-6 col-md-4">
-                                    <h5 class="text-primary fw-semibold fs-4 mb-0">7-Month</h5><span class="text-dark"> Developer Training in Progress</span>
-                                </div>
-                            </div>
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+            <div>
+                <i class="fas fa-code"></i>
+                <h3>Web Designing</h3>
+                <p>Currently learning MERN-stack development at Brototype. Skilled in HTML, CSS, JavaScript, Bootstrap, and React. Building responsive and user-friendly websites with a focus on clean design and functionality. Gaining hands-on experience through real-time projects, version control (Git/GitHub), and teamwork. Aiming to create modern, scalable web solutions that provide a seamless user experience.</p>
+                <a href="#">Learn more</a>
+            </div>
+
+            <div>
+                <i class="fas fa-comments"></i>
+                <h3>Public Relations Officer</h3>
+                <p>Worked as PRO at Emilia Beauty Hub (Konnattu Group). Ensured customer satisfaction, promoted Loyalty Club, and handled calls and social media queries. Managed feedback, resolved complaints, and supported HR duties in the team's absence. Focused on improving customer experience through communication, problem-solving, and coordination skills in a fast-paced environment.</p>
+                <a href="#">Learn more</a>
+            </div>
+
+            <div>
+                <i class="fas fa-headset"></i>
+                <h3>Academic Consultant</h3>
+                <p>Served as Academic Consultant at Avodha Edu Tech, Infopark, Kochi. Guided students by recommending suitable courses and supporting enrollment. Handled queries via calls and online platforms. Converted leads through clear communication and trust-building. Helped students align education with goals while assisting the sales team in achieving targets.</p>
+                <a href="#">Learn more</a>
+            </div>
+            
+            </div>
+        </div>
+    </div>
+
+    <!-- -------------------portfolio------------->
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/project-1.png">
+                    <div class="layer">
+                        <h3>Frooti Home clone</h3>
+                            <p>A static clone of the Frooti homepage built with HTML, CSS, and JavaScript.</p>
+                            <a href="https://ramsi0786.github.io/frooti_website_clone/"><i class="fas fa-external-link-alt"></i></a>
                     </div>
+                </div>
+                <div class="work">
+                    <img src="images/project-2.png">
+                    <div class="layer">
+                        <h3>Uber Homepage clone</h3>
+                            <p>A non-responsive replica of the Uber landing page designed using HTML and CSS.</p>
+                            <a href="https://ramsi0786.github.io/uber_website_clone/"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/project-3.png">
+                    <div class="layer">
+                        <h3>LinkedIn Homepage</h3>
+                            <p>A responsive LinkedIn homepage clone built using HTML, CSS, and JS, featuring the landing page and active profile section.</p>
+                            <a href="https://ramsi0786.github.io/LinkedIn_clone/"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">see more</a>
+        </div>
+    </div>
+    <!-- -------------------contact---------------->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i>ramsisidheek7000@gmail.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i>9037524663</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/ramsi-sidheek-2b92822a5"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/_ramsiii_0786?igsh=MXN5Y2NsbDk0MHlvZg=="><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/16dEex766F/"><i class="fab fa-facebook"></i></a>
+                    </div>
+                    <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="E-mail" placeholder="Your E-mail" required>
+                        <textarea name="Message" rows="7" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">submit</button>
+                    </form>
+                    <span id="msg"></span>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section id="services" class="section bg-gray" style="background-image: url(images/background-services.jpg); background-repeat: no-repeat; background-size: cover;">
-        <div class="container">
-            <div class="section-heading">
-                <h3>My Services</h3>
-            </div>
-            <div class="row gy-5">
-                <div class="col-md-6">
-                    <div class="feature-box ">
-                        <div class="icon"><i class="fas fa-comments"></i></div>
-                        <div class="content">
-                            <h5>Public Relations Officer</h5>
-                            <p>As a Branch Public Relations Officer (PRO) at Emilia Beauty Hub, part of the Konnattu Group, I ensured customer satisfaction by delivering an engaging experience. I led Loyalty Club Management by promoting memberships and exclusive offers. I handled call management, including inquiries, follow-ups, and social media queries. I managed suggestion books and addressed complaints for service improvement. Additionally, I supported HR duties effectively during the HR department’s absence, ensuring smooth administrative operations.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="feature-box">
-                        <div class="icon"><i class="fas fa-headset"></i></div>
-                        <div class="content">
-                            <h5>Academic Consultant</h5>
-                            <p>As an Academic Consultant at Avodha Edu Tech (Pvt Ltd), Infopark, Kochi, I provided personalized academic guidance and recommended suitable courses to help students align with their career goals. I actively supported the sales and enrollment process, ensuring smooth and efficient onboarding for new learners. My role also involved effective communication with potential students through calls and online platforms, addressing their queries and building trust throughout their decision-making journey.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="copyright">
+            <p>copyright © 2025 Ram$! Portfolio. All Rights Reserved.</p>
         </div>
-    </section>
-
-    <section id="skill" class="section">
-        <div class="container">
-            <div class="row gy-5">
-                <div class="col-lg-6">
-                    <div class="section-heading text-start">
-                        <h3>My Skills</h3>
-                    </div>
-                    <div class="skill-box">
-                        <div class="row g-3">
-                            <div class="col-6 col-md-4 col-lg-6">
-                                <div class="feature-box">
-                                    <h5>Problem Solving</h5>
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-4 col-lg-6">
-                                <div class="feature-box">
-                                    <h5>Communication</h5>
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-4 col-lg-6">
-                                <div class="feature-box">
-                                    <h5>Time Management</h5>
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-4 col-lg-6">
-                                <div class="feature-box">
-                                    <h5>HTML & CSS</h5>
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-4 col-lg-6">
-                                <div class="feature-box">
-                                    <h5>Teamwork</h5>
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-4 col-lg-6">
-                                <div class="feature-box">
-                                    <h5>Optimization</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 text-center">
-                    <img src="images/skill.jpg" alt="skill">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="portfolio" class="section bg-gray">
-        <div class="container">
-            <div class="section-heading">
-                <h3>Latest Projects</h3>
-            </div>
-            <div class="portfolio-box">
-                <div class="row gx-3 gy-4 pb-3 mb-5 pb-lg-3 mb-lg-3 justify-content-around align-items-center">
-                    <div class="col-md-6 col-lg-5">
-                        <div class="portfolio-img">
-                            <img src="images/project-1.png" alt="frooti-clone">
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-5">
-                        <div class="portfolio-text">
-                            <span>Website Clone</span>
-                            <h4>Frooti Website Homepage clone</h4>
-                            <p>A static clone of the Frooti homepage built with HTML, CSS, and JavaScript. It features vibrant layout sections, product display, and scroll-based animations.</p>
-                            <a href="https://ramsi0786.github.io/frooti_website_clone/ " class="colored-btn mt-1">Live Demo </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row gx-3 gy-4 pb-3 mb-5 pb-lg-3 mb-lg-3 justify-content-around align-items-center">
-                    <div class="col-md-6 col-lg-5">
-                        <div class="portfolio-img">
-                            <img src="images/uber-project.png" alt="Uber-clone">
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-5">
-                        <div class="portfolio-text">
-                            <span>Website Clone</span>
-                            <h4>Uber Website Homepage clone</h4>
-                            <p>A non-responsive replica of the Uber landing page designed using HTML and CSS, including logo placement, navigation bar, and content layout.</p>
-                            <a href="https://ramsi0786.github.io/uber_website_clone/" class="colored-btn mt-1">Live Demo </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section bg-dark">
-        <div class="container">
-            <div class="row gy-5">
-                <div class="col-lg-6">
-                    <div class="contact-form">
-                        <h2 class="text-dark">Get in Touch</h2>
-                        <p class="lead">If you have any questions, project ideas, or want to connect, feel free to reach out to me!</p>
-                        <form id="form" action="#">
-                            <div class="row gy-4 gx-3">
-                                <div  class="col-12">
-                                    <div class="form-group">
-                                        <label class="form-label">Name</label>
-                                        <input type="text" id="name" class="form-control" name="name" placeholder="Enter yoyr Name">
-                                        <span style="color: red;" id="name_error"></span>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label class="form-label">Email</label>
-                                        <input type="email" id="email" class="form-control" name="email" placeholder="Enter your Mail Id">
-                                        <span style="color: red;" id="email_error"></span>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label class="form-label">Phone Number</label>
-                                        <input type="tel" id="number" class="form-control" name="tel" placeholder="Enter your vaild Phone number">
-                                        <span style="color: red;" id="phone_error"></span>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label class="form-label">Subject</label>
-                                        <input type="text" id="subject" class="form-control" name="subject" placeholder="Enter the subject want to discuss">
-                                        <span style="color: red;" id="subject_error"></span>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label class="form-label">Message</label>
-                                        <textarea name="message" rows="3" class="form-control"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="colored-btn" type="submit" onclick="sendMail()">sent message</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-lg-5 ms-auto col-xl-4">
-                    <div class="pb-5 d-none d-md-block">
-                        <img src="images/communication.png" class="w-100" alt="communication">
-                    </div>
-                    <ul class="contact-infos">
-                        <li>
-                            <div class="icon bg-1">
-                                <i class="bx bx-phone"></i>
-                            </div>
-                            <div class="col ps-3">
-                                <h5>Phone</h5>
-                                <p>+91 9037524663</p>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="icon bg-2">
-                                <i class="bx bx-envelope"></i>
-                            </div>
-                            <div class="col ps-3">
-                                <h5>e-mail</h5>
-                                <p>ramsisidheek7000@gmail.com</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 py-2">
-                    <div class="nav justify-content-center justify-content-md-start">
-                        <a href="https://www.facebook.com/share/16dEex766F/"><i class="bx bxl-facebook"></i></a>
-                        <a href="https://www.instagram.com/_ramsiii_0786?igsh=MXN5Y2NsbDk0MHlvZg=="><i class="bx bxl-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/ramsi-sidheek-2b92822a5"><i class="bx bxl-linkedin"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 py-2 text-center text-md-end">
-                <p class="m-0">© 2025 Ram$! Portfolio. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
+    </div>
     
-    </main>
+    <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="script.js"></script>
+    function opentab(tabname){
+        for(tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwLOpWmwz6bg4sa0-N-4WDVmiCsjmsGnPgXWhao-Y1a61K-S9rbgzR9enXQnnf7OewFXQ/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message Sent Successfully"
+        setTimeout(function(){
+            msg.innerHTML = ""
+        },5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
 </body>
 </html>
